@@ -17,7 +17,7 @@ class GildedRose
   }
   public void updateQuality(Item item)
   {
-    UpdateBrie updater = new UpdateBrie();
+    ItemUpdater updater = new UpdateBrie();
     if (updater.isType(item))
     {
       updater.updateItem(item);
