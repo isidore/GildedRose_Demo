@@ -17,7 +17,10 @@ class GildedRose
   }
   public void updateQuality(Item item)
   {
-    ItemUpdater updaters[] = {new UpdateBrie(), new UpdateBackstagePasses(), new UpdateSulfuras()};
+    ItemUpdater updaters[] = {new UpdateBrie(),
+                              new UpdateBackstagePasses(),
+                              new UpdateSulfuras(),
+                              new UpdateDefault()};
     for (ItemUpdater itemUpdater : updaters)
     {
       if (itemUpdater.isType(item))
