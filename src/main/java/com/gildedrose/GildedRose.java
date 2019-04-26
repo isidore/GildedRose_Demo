@@ -147,10 +147,6 @@ class GildedRose
         }
         else
         {
-          if (item.quality < 50)
-          {
-            item.quality = item.quality + 1;
-          }
         }
       }
       return;
