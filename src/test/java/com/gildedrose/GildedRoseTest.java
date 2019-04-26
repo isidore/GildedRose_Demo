@@ -2,16 +2,16 @@ package com.gildedrose;
 
 import java.text.MessageFormat;
 
-import org.approvaltests.Approvals;
+import org.approvaltests.combinations.CombinationApprovals;
 import org.junit.Test;
 
-public class GildedRoseTest extends FasterTestCommitRevertTest
+public class GildedRoseTest // extends FasterTestCommitRevertTest
 {
   @Test
-  public void foo()
+  public void foo() throws Exception
   {
-    String result = doStuff("foo");
-    Approvals.verify(result);
+    String[] names = {"foo"};
+    CombinationApprovals.verifyAllCombinations(this::doStuff, names);
   }
   public String doStuff(String name)
   {

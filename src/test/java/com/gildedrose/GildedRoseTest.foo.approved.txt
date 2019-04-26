@@ -1,1 +1,1 @@
-[foo, sellin: -1, quality: 0]
+[foo] => [foo, sellin: -1, quality: 0] 
