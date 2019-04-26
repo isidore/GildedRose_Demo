@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-public class UpdateDefault
+public class UpdateDefault implements ItemUpdater
 {
   public UpdateDefault()
   {
