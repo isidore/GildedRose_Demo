@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-public class UpdateSulfuras
+public class UpdateSulfuras implements ItemUpdater
 {
   public UpdateSulfuras()
   {
@@ -10,7 +10,7 @@ public class UpdateSulfuras
   {
     return item.name.equals("Sulfuras, Hand of Ragnaros");
   }
-  protected void updateItem(Item item)
+  public void updateItem(Item item)
   {
     // do nothing
   }
