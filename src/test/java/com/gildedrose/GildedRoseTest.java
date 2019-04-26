@@ -10,7 +10,7 @@ public class GildedRoseTest extends FasterTestCommitRevertTest
   @Test
   public void foo() throws Exception
   {
-    String[] names = {"foo", "Aged Brie"};
+    String[] names = {"foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert"};
     CombinationApprovals.verifyAllCombinations(this::doStuff, names);
   }
   public String doStuff(String name)
