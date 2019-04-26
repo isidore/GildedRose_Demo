@@ -97,7 +97,6 @@ class GildedRose
         }
         else
         {
-          item.quality = item.quality - item.quality;
         }
       }
       return;
