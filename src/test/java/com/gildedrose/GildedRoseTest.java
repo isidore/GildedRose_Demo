@@ -14,7 +14,7 @@ public class GildedRoseTest extends FasterTestCommitRevertTest
                       "Aged Brie",
                       "Backstage passes to a TAFKAL80ETC concert",
                       "Sulfuras, Hand of Ragnaros"};
-    Integer qualities[] = {-1, 0, 1};
+    Integer qualities[] = {-1, 0, 1, 49, 50, 51};
     CombinationApprovals.verifyAllCombinations(this::doStuff, names, qualities);
   }
   public String doStuff(String name, Integer quality)
