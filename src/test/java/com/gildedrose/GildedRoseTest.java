@@ -15,11 +15,12 @@ public class GildedRoseTest extends FasterTestCommitRevertTest
                       "Backstage passes to a TAFKAL80ETC concert",
                       "Sulfuras, Hand of Ragnaros"};
     Integer qualities[] = {-1, 0, 1, 49, 50, 51};
-    CombinationApprovals.verifyAllCombinations(this::doStuff, names, qualities);
+    Integer sellins[] = {0};
+    CombinationApprovals.verifyAllCombinations(this::doStuff, names, qualities, sellins);
   }
-  public String doStuff(String name, Integer quality)
+  public String doStuff(String name, Integer quality, Integer sellin)
   {
-    Item[] items = new Item[]{new Item(name, 0, quality)};
+    Item[] items = new Item[]{new Item(name, sellin, quality)};
     GildedRose app = new GildedRose(items);
     app.updateQuality();
     String result = toString(app.items[0]);
