@@ -1,17 +1,15 @@
 package com.gildedrose;
 
-public class UpdateBackstagePasses extends UpdateBrie
+public class UpdateBackstagePasses
 {
   public UpdateBackstagePasses()
   {
     super();
   }
-
   public boolean ifBackstagePasses(Item item)
   {
     return item.name.equals("Backstage passes to a TAFKAL80ETC concert");
   }
-
   public void updateQualityForBackstagePasses(Item item)
   {
     if (item.quality < 50)

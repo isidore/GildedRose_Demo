@@ -17,9 +17,9 @@ class GildedRose extends UpdateDefault
   }
   public void updateQuality(Item item)
   {
-    if (isBrie(item))
+    if (new UpdateBrie().isBrie(item))
     {
-      updateQualityForBrie(item);
+      new UpdateBrie().updateQualityForBrie(item);
       return;
     }
     if (ifBackstagePasses(item))
