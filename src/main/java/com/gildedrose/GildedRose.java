@@ -32,7 +32,7 @@ class GildedRose
       updateQualityForSulfuras(item);
       return;
     }
-    else
+    else if (true)
     {
       updateDefaultItem(item);
       return;
