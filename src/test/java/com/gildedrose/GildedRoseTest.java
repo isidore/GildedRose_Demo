@@ -3,10 +3,9 @@ package com.gildedrose;
 import java.text.MessageFormat;
 
 import org.approvaltests.Approvals;
-import org.approvaltests.testcommitrevert.TestCommitRevertTest;
 import org.junit.Test;
 
-public class GildedRoseTest extends TestCommitRevertTest
+public class GildedRoseTest extends FasterTestCommitRevertTest
 {
   @Test
   public void foo()
