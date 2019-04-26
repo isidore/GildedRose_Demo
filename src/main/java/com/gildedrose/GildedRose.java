@@ -27,9 +27,9 @@ class GildedRose extends UpdateDefault
       new UpdateBackstagePasses().updateQualityForBackstagePasses(item);
       return;
     }
-    if (ifSulfuras(item))
+    if (new UpdateSulfuras().ifSulfuras(item))
     {
-      updateQualityForSulfuras(item);
+      new UpdateSulfuras().updateQualityForSulfuras(item);
       return;
     }
     else if (ifDefault())

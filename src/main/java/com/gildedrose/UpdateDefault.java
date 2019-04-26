@@ -1,17 +1,15 @@
 package com.gildedrose;
 
-public class UpdateDefault extends UpdateSulfuras
+public class UpdateDefault
 {
   public UpdateDefault()
   {
     super();
   }
-
   public boolean ifDefault()
   {
     return true;
   }
-
   public void updateDefaultItem(Item item)
   {
     if (item.quality > 0)
