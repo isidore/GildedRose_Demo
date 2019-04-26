@@ -17,7 +17,7 @@ public class UpdateDefault implements ItemUpdater
   }
   public static void updateNormalItem(Item item, int rate)
   {
-    item.sellIn = item.sellIn - rate;
+    item.sellIn = item.sellIn - 1;
     if (item.quality <= 0)
     {
       return;

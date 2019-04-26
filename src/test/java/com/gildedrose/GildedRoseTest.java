@@ -2,11 +2,12 @@ package com.gildedrose;
 
 import java.text.MessageFormat;
 
+import org.approvaltests.Approvals;
 import org.approvaltests.combinations.CombinationApprovals;
 import org.approvaltests.legacycode.Range;
 import org.junit.Test;
 
-public class GildedRoseTest extends FasterTestCommitRevertTest
+public class GildedRoseTest //extends FasterTestCommitRevertTest
 {
   @Test
   public void foo() throws Exception
@@ -30,5 +31,14 @@ public class GildedRoseTest extends FasterTestCommitRevertTest
   public String toString(Item item)
   {
     return MessageFormat.format("[{0}, sellin: {1}, quality: {2}]", item.name, item.sellIn, item.quality);
+  }
+  @Test
+  public void testConjured() throws Exception
+  {
+    Item[] items = new Item[]{new Item("Conjured Pot", 8, 5)};
+    GildedRose app = new GildedRose(items);
+    app.updateQuality();
+    String result = toString(app.items[0]);
+    Approvals.verify(result);;
   }
 }

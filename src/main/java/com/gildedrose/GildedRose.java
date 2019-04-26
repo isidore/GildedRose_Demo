@@ -20,6 +20,7 @@ class GildedRose
     ItemUpdater updaters[] = {new UpdateBrie(),
                               new UpdateBackstagePasses(),
                               new UpdateSulfuras(),
+                              new UpdateConjured(),
                               new UpdateDefault()};
     for (ItemUpdater itemUpdater : updaters)
     {
