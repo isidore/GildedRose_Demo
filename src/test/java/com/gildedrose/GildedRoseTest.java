@@ -3,6 +3,7 @@ package com.gildedrose;
 import java.text.MessageFormat;
 
 import org.approvaltests.combinations.CombinationApprovals;
+import org.approvaltests.legacycode.Range;
 import org.junit.Test;
 
 public class GildedRoseTest extends FasterTestCommitRevertTest
@@ -15,7 +16,7 @@ public class GildedRoseTest extends FasterTestCommitRevertTest
                       "Backstage passes to a TAFKAL80ETC concert",
                       "Sulfuras, Hand of Ragnaros"};
     Integer qualities[] = {-1, 0, 1, 49, 50, 51};
-    Integer sellins[] = {0};
+    Integer sellins[] = Range.get(-1, 15);
     CombinationApprovals.verifyAllCombinations(this::doStuff, names, qualities, sellins);
   }
   public String doStuff(String name, Integer quality, Integer sellin)
