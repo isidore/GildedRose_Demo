@@ -19,6 +19,9 @@ class GildedRose
   {
     ItemUpdater updater = new UpdateBrie();
     ItemUpdater updaters[] = {updater};
+    for (ItemUpdater itemUpdater : updaters)
+    {
+    }
     if (updater.isType(item))
     {
       updater.updateItem(item);
