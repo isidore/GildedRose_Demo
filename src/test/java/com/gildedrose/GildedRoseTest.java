@@ -5,12 +5,12 @@ import java.text.MessageFormat;
 import org.approvaltests.combinations.CombinationApprovals;
 import org.junit.Test;
 
-public class GildedRoseTest // extends FasterTestCommitRevertTest
+public class GildedRoseTest extends FasterTestCommitRevertTest
 {
   @Test
   public void foo() throws Exception
   {
-    String[] names = {"foo"};
+    String[] names = {"foo", "Aged Brie"};
     CombinationApprovals.verifyAllCombinations(this::doStuff, names);
   }
   public String doStuff(String name)

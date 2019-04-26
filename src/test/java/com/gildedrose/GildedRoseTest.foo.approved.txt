@@ -1,1 +1,2 @@
 [foo] => [foo, sellin: -1, quality: 0] 
+[Aged Brie] => [Aged Brie, sellin: -1, quality: 2] 
