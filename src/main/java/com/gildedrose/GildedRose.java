@@ -26,11 +26,6 @@ class GildedRose
         return;
       }
     }
-    if (new UpdateBackstagePasses().isType(item))
-    {
-      new UpdateBackstagePasses().updateItem(item);
-      return;
-    }
     if (new UpdateSulfuras().isType(item))
     {
       new UpdateSulfuras().updateItem(item);
