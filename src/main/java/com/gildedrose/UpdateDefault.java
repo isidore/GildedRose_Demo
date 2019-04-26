@@ -6,7 +6,7 @@ public class UpdateDefault implements ItemUpdater
   {
     super();
   }
-  public boolean isType()
+  public boolean isType(Item item)
   {
     return true;
   }
