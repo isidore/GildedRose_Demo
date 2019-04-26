@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-class GildedRose extends UpdateDefault
+class GildedRose
 {
   Item[] items;
   public GildedRose(Item[] items)
@@ -32,9 +32,9 @@ class GildedRose extends UpdateDefault
       new UpdateSulfuras().updateQualityForSulfuras(item);
       return;
     }
-    else if (ifDefault())
+    else if (new UpdateDefault().ifDefault())
     {
-      updateDefaultItem(item);
+      new UpdateDefault().updateDefaultItem(item);
       return;
     }
   }
