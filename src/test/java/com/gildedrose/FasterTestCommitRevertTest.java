@@ -1,6 +1,10 @@
 package com.gildedrose;
 
+import org.approvaltests.testcommitrevert.GitCommitOrRevert;
 import org.approvaltests.testcommitrevert.TestCommitRevertTest;
+
+import com.spun.util.ObjectUtils;
+import com.spun.util.io.FileUtils;
 
 public class FasterTestCommitRevertTest extends TestCommitRevertTest
 {
