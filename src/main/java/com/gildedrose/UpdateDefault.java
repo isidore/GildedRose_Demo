@@ -14,12 +14,14 @@ public class UpdateDefault implements ItemUpdater
   {
     if (item.quality > 0)
     {
+      stuff(item);
+      return;
     }
     else
     {
+      stuff(item);
+      return;
     }
-    stuff(item);
-    return;
   }
   public void stuff(Item item)
   {
