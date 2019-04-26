@@ -32,11 +32,15 @@ class GildedRose
       updateQualityForSulfuras(item);
       return;
     }
-    else if (true)
+    else if (ifDefault())
     {
       updateDefaultItem(item);
       return;
     }
+  }
+  public boolean ifDefault()
+  {
+    return true;
   }
   public boolean ifSulfuras(Item item)
   {
