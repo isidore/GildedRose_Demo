@@ -14,7 +14,7 @@ public class UpdateDefault implements ItemUpdater
   {
     if (item.quality > 0)
     {
-      if (item.quality > 0)
+      if (true)
       {
         item.quality = item.quality - 1;
       }
