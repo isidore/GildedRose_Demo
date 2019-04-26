@@ -12,19 +12,20 @@ public class UpdateDefault implements ItemUpdater
   }
   public void updateItem(Item item)
   {
-    item.sellIn = item.sellIn - 1;
+    int rate = 1;
+    item.sellIn = item.sellIn - rate;
     if (item.quality <= 0)
     {
       return;
     }
     else
     {
-      item.quality = item.quality - 1;
+      item.quality = item.quality - rate;
       if (item.sellIn < 0)
       {
         if (0 < item.quality)
         {
-          item.quality = item.quality - 1;
+          item.quality = item.quality - rate;
         }
       }
       return;
