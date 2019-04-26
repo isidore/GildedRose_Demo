@@ -5,17 +5,18 @@ import java.text.MessageFormat;
 import org.approvaltests.combinations.CombinationApprovals;
 import org.junit.Test;
 
-public class GildedRoseTest extends FasterTestCommitRevertTest
+public class GildedRoseTest //extends FasterTestCommitRevertTest
 {
   @Test
   public void foo() throws Exception
   {
     String[] names = {"foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert"};
-    CombinationApprovals.verifyAllCombinations(this::doStuff, names);
+    Integer qualities[] = {0};
+    CombinationApprovals.verifyAllCombinations(this::doStuff, names, qualities);
   }
-  public String doStuff(String name)
+  public String doStuff(String name, Integer quality)
   {
-    Item[] items = new Item[]{new Item(name, 0, 0)};
+    Item[] items = new Item[]{new Item(name, 0, quality)};
     GildedRose app = new GildedRose(items);
     app.updateQuality();
     String result = toString(app.items[0]);
