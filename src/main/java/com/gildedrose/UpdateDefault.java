@@ -12,6 +12,11 @@ public class UpdateDefault implements ItemUpdater
   }
   public void updateItem(Item item)
   {
+    stuff(item);
+    return;
+  }
+  public void stuff(Item item)
+  {
     if (item.quality > 0)
     {
       item.quality = item.quality - 1;
@@ -24,6 +29,5 @@ public class UpdateDefault implements ItemUpdater
         item.quality = item.quality - 1;
       }
     }
-    return;
   }
 }
