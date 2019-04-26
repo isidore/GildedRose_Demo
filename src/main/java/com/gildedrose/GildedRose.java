@@ -27,12 +27,12 @@ class GildedRose
       new UpdateBackstagePasses().updateQualityForBackstagePasses(item);
       return;
     }
-    if (new UpdateSulfuras().ifSulfuras(item))
+    if (new UpdateSulfuras().isType(item))
     {
       new UpdateSulfuras().updateQualityForSulfuras(item);
       return;
     }
-    else if (new UpdateDefault().ifDefault())
+    else if (new UpdateDefault().isType())
     {
       new UpdateDefault().updateDefaultItem(item);
       return;

@@ -6,7 +6,7 @@ public class UpdateDefault
   {
     super();
   }
-  public boolean ifDefault()
+  public boolean isType()
   {
     return true;
   }

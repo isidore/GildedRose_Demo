@@ -6,7 +6,7 @@ public class UpdateSulfuras
   {
     super();
   }
-  public boolean ifSulfuras(Item item)
+  public boolean isType(Item item)
   {
     return item.name.equals("Sulfuras, Hand of Ragnaros");
   }
