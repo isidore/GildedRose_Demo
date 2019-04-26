@@ -12,6 +12,12 @@ public class UpdateDefault implements ItemUpdater
   }
   public void updateItem(Item item)
   {
+    if (item.quality > 0)
+    {
+    }
+    else
+    {
+    }
     stuff(item);
     return;
   }
