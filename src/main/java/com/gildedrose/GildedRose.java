@@ -27,11 +27,8 @@ class GildedRose
       updateQualityForBackstagePasses(item);
       return;
     }
-    else
-    {
-      update2(item);
-      return;
-    }
+    update2(item);
+    return;
   }
   public void update2(Item item)
   {
