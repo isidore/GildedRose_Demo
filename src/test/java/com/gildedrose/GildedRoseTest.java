@@ -12,6 +12,10 @@ public class GildedRoseTest
     Item[] items = new Item[]{new Item("foo", 0, 0)};
     GildedRose app = new GildedRose(items);
     app.updateQuality();
-    assertEquals("foo, -1, 0", app.items[0].toString());
+    assertEquals("foo, -1, 0", toString(app.items[0]));
+  }
+  public String toString(Item item)
+  {
+    return item.name + ", " + item.sellIn + ", " + item.quality;
   }
 }
