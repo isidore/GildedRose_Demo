@@ -21,11 +21,11 @@ class GildedRose
     ItemUpdater updaters[] = {updater};
     for (ItemUpdater itemUpdater : updaters)
     {
-    }
-    if (updater.isType(item))
-    {
-      updater.updateItem(item);
-      return;
+      if (updater.isType(item))
+      {
+        updater.updateItem(item);
+        return;
+      }
     }
     if (new UpdateBackstagePasses().isType(item))
     {
