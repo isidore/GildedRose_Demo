@@ -26,12 +26,7 @@ class GildedRose
         return;
       }
     }
-    if (new UpdateSulfuras().isType(item))
-    {
-      new UpdateSulfuras().updateItem(item);
-      return;
-    }
-    else if (new UpdateDefault().isType())
+    if (new UpdateDefault().isType())
     {
       new UpdateDefault().updateItem(item);
       return;
