@@ -22,11 +22,8 @@ class GildedRose
       updateQualityForBrie(item);
       return;
     }
-    else
-    {
-      updateQualty2(item);
-      return;
-    }
+    updateQualty2(item);
+    return;
   }
   public void updateQualty2(Item item)
   {
