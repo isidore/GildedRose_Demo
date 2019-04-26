@@ -22,9 +22,9 @@ class GildedRose extends UpdateDefault
       new UpdateBrie().updateQualityForBrie(item);
       return;
     }
-    if (ifBackstagePasses(item))
+    if (new UpdateBackstagePasses().ifBackstagePasses(item))
     {
-      updateQualityForBackstagePasses(item);
+      new UpdateBackstagePasses().updateQualityForBackstagePasses(item);
       return;
     }
     if (ifSulfuras(item))
