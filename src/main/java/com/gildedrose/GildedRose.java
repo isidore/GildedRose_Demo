@@ -29,10 +29,5 @@ class GildedRose
         return;
       }
     }
-    if (new UpdateDefault().isType(item))
-    {
-      new UpdateDefault().updateItem(item);
-      return;
-    }
   }
 }
