@@ -6,7 +6,7 @@ public class UpdateBackstagePasses
   {
     super();
   }
-  public boolean ifBackstagePasses(Item item)
+  public boolean isType(Item item)
   {
     return item.name.equals("Backstage passes to a TAFKAL80ETC concert");
   }

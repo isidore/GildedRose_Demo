@@ -17,12 +17,12 @@ class GildedRose
   }
   public void updateQuality(Item item)
   {
-    if (new UpdateBrie().isBrie(item))
+    if (new UpdateBrie().isType(item))
     {
       new UpdateBrie().updateQualityForBrie(item);
       return;
     }
-    if (new UpdateBackstagePasses().ifBackstagePasses(item))
+    if (new UpdateBackstagePasses().isType(item))
     {
       new UpdateBackstagePasses().updateQualityForBackstagePasses(item);
       return;

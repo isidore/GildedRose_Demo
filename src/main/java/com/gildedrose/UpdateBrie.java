@@ -7,7 +7,7 @@ public class UpdateBrie
     super();
   }
 
-  public boolean isBrie(Item item)
+  public boolean isType(Item item)
   {
     return item.name.equals("Aged Brie");
   }
