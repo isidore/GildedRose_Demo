@@ -22,7 +22,7 @@ class GildedRose
       updateQualityForBrie(item);
       return;
     }
-    if (item.name.equals("Backstage passes to a TAFKAL80ETC concert"))
+    if (ifBackstagePasses(item))
     {
       updateQualityForBackstagePasses(item);
       return;
@@ -37,6 +37,10 @@ class GildedRose
       updateDefaultItem(item);
       return;
     }
+  }
+  public boolean ifBackstagePasses(Item item)
+  {
+    return item.name.equals("Backstage passes to a TAFKAL80ETC concert");
   }
   public boolean isBrie(Item item)
   {
@@ -94,7 +98,7 @@ class GildedRose
     if (item.quality < 50)
     {
       item.quality = item.quality + 1;
-      if (item.name.equals("Backstage passes to a TAFKAL80ETC concert"))
+      if (ifBackstagePasses(item))
       {
       }
     }
