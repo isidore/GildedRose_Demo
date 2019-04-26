@@ -85,7 +85,7 @@ class GildedRose
       }
       if (item.sellIn < 0)
       {
-        if (!item.name.equals("Backstage passes to a TAFKAL80ETC concert"))
+        if (true)
         {
           if (item.quality > 0)
           {
