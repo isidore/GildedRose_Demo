@@ -24,6 +24,7 @@ class GildedRose
     {
     }
     updateQuality2(item);
+    return;
   }
   public void updateQuality2(Item item)
   {
