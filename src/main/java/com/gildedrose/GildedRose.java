@@ -21,9 +21,9 @@ class GildedRose
     ItemUpdater updaters[] = {updater};
     for (ItemUpdater itemUpdater : updaters)
     {
-      if (updater.isType(item))
+      if (itemUpdater.isType(item))
       {
-        updater.updateItem(item);
+        itemUpdater.updateItem(item);
         return;
       }
     }
