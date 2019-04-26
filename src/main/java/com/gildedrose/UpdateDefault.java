@@ -10,7 +10,7 @@ public class UpdateDefault
   {
     return true;
   }
-  public void updateDefaultItem(Item item)
+  public void updateItem(Item item)
   {
     if (item.quality > 0)
     {

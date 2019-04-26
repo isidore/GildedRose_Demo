@@ -10,7 +10,7 @@ public class UpdateSulfuras
   {
     return item.name.equals("Sulfuras, Hand of Ragnaros");
   }
-  protected void updateQualityForSulfuras(Item item)
+  protected void updateItem(Item item)
   {
     // do nothing
   }

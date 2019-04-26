@@ -19,22 +19,22 @@ class GildedRose
   {
     if (new UpdateBrie().isType(item))
     {
-      new UpdateBrie().updateQualityForBrie(item);
+      new UpdateBrie().updateItem(item);
       return;
     }
     if (new UpdateBackstagePasses().isType(item))
     {
-      new UpdateBackstagePasses().updateQualityForBackstagePasses(item);
+      new UpdateBackstagePasses().updateItem(item);
       return;
     }
     if (new UpdateSulfuras().isType(item))
     {
-      new UpdateSulfuras().updateQualityForSulfuras(item);
+      new UpdateSulfuras().updateItem(item);
       return;
     }
     else if (new UpdateDefault().isType())
     {
-      new UpdateDefault().updateDefaultItem(item);
+      new UpdateDefault().updateItem(item);
       return;
     }
   }

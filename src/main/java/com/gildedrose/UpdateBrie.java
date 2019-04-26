@@ -12,7 +12,7 @@ public class UpdateBrie
     return item.name.equals("Aged Brie");
   }
 
-  public void updateQualityForBrie(Item item)
+  public void updateItem(Item item)
   {
     if (item.quality < 50)
     {
