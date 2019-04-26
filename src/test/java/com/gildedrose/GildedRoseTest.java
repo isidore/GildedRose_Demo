@@ -14,7 +14,8 @@ public class GildedRoseTest
     Item[] items = new Item[]{new Item("foo", 0, 0)};
     GildedRose app = new GildedRose(items);
     app.updateQuality();
-    assertEquals("[foo, sellin: -1, quality: 0]", toString(app.items[0]));
+    String result = toString(app.items[0]);
+    assertEquals("[foo, sellin: -1, quality: 0]", result);
   }
   public String toString(Item item)
   {
