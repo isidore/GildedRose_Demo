@@ -11,12 +11,12 @@ public class GildedRoseTest extends TestCommitRevertTest
   @Test
   public void foo()
   {
-    String result = doStuff();
+    String result = doStuff("foo");
     Approvals.verify(result);
   }
-  public String doStuff()
+  public String doStuff(String name)
   {
-    Item[] items = new Item[]{new Item("foo", 0, 0)};
+    Item[] items = new Item[]{new Item(name, 0, 0)};
     GildedRose app = new GildedRose(items);
     app.updateQuality();
     String result = toString(app.items[0]);
