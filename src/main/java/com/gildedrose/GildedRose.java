@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-class GildedRose extends UpdateBackstagePasses
+class GildedRose extends UpdateSulfuras
 {
   Item[] items;
   public GildedRose(Item[] items)
@@ -41,14 +41,6 @@ class GildedRose extends UpdateBackstagePasses
   public boolean ifDefault()
   {
     return true;
-  }
-  public boolean ifSulfuras(Item item)
-  {
-    return item.name.equals("Sulfuras, Hand of Ragnaros");
-  }
-  private void updateQualityForSulfuras(Item item)
-  {
-    // do nothing
   }
   public void updateDefaultItem(Item item)
   {
