@@ -1,9 +1,8 @@
 package com.gildedrose;
 
-import static org.junit.Assert.assertEquals;
-
 import java.text.MessageFormat;
 
+import org.approvaltests.Approvals;
 import org.junit.Test;
 
 public class GildedRoseTest
@@ -15,7 +14,7 @@ public class GildedRoseTest
     GildedRose app = new GildedRose(items);
     app.updateQuality();
     String result = toString(app.items[0]);
-    assertEquals("[foo, sellin: -1, quality: 0]", result);
+    Approvals.verify(result);
   }
   public String toString(Item item)
   {
