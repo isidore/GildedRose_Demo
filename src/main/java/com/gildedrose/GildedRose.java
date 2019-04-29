@@ -27,7 +27,7 @@ class GildedRose
       updateBackstagePasses(item);
       return;
     }
-    if (item.name.equals("Sulfuras, Hand of Ragnaros"))
+    if (isSulfaras(item))
     {
       updateSulfuras(item);
       return;
@@ -37,6 +37,10 @@ class GildedRose
       updateDefault(item);
       return;
     }
+  }
+  public boolean isSulfaras(Item item)
+  {
+    return item.name.equals("Sulfuras, Hand of Ragnaros");
   }
   public boolean isBackstagePasses(Item item)
   {
