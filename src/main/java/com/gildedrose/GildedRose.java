@@ -32,7 +32,7 @@ class GildedRose
       updateSulfuras(item);
       return;
     }
-    if (isSulfuras(item))
+    if (isConjured(item))
     {
       updateSulfuras(item);
       return;
@@ -42,6 +42,10 @@ class GildedRose
       updateDefault(item);
       return;
     }
+  }
+  private boolean isConjured(Item item)
+  {
+    return false;
   }
   public boolean isSulfuras(Item item)
   {
