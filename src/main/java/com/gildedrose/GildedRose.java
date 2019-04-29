@@ -32,6 +32,11 @@ class GildedRose
       updateSulfuras(item);
       return;
     }
+    if (isSulfuras(item))
+    {
+      updateSulfuras(item);
+      return;
+    }
     else
     {
       updateDefault(item);
