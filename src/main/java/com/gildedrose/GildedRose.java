@@ -31,9 +31,6 @@ class GildedRose
     {
       if (item.sellIn < 0)
       {
-        if (item.quality > 0)
-        {
-        }
       }
       return;
     }
