@@ -29,29 +29,30 @@ class GildedRose
     }
     if (item.name.equals("Sulfuras, Hand of Ragnaros"))
     {
-      other(item);
+      if (item.quality > 0)
+      {
+        if (!item.name.equals("Sulfuras, Hand of Ragnaros"))
+        {
+          item.quality = item.quality - 1;
+        }
+      }
+      if (!item.name.equals("Sulfuras, Hand of Ragnaros"))
+      {
+        item.sellIn = item.sellIn - 1;
+      }
+      if (item.sellIn < 0)
+      {
+        if (item.quality > 0)
+        {
+          if (!item.name.equals("Sulfuras, Hand of Ragnaros"))
+          {
+            item.quality = item.quality - 1;
+          }
+        }
+      }
       return;
     }
     else
-    {
-      other(item);
-      return;
-    }
-  }
-  public void other(Item item)
-  {
-    if (item.quality > 0)
-    {
-      if (!item.name.equals("Sulfuras, Hand of Ragnaros"))
-      {
-        item.quality = item.quality - 1;
-      }
-    }
-    if (!item.name.equals("Sulfuras, Hand of Ragnaros"))
-    {
-      item.sellIn = item.sellIn - 1;
-    }
-    if (item.sellIn < 0)
     {
       if (item.quality > 0)
       {
@@ -60,8 +61,22 @@ class GildedRose
           item.quality = item.quality - 1;
         }
       }
+      if (!item.name.equals("Sulfuras, Hand of Ragnaros"))
+      {
+        item.sellIn = item.sellIn - 1;
+      }
+      if (item.sellIn < 0)
+      {
+        if (item.quality > 0)
+        {
+          if (!item.name.equals("Sulfuras, Hand of Ragnaros"))
+          {
+            item.quality = item.quality - 1;
+          }
+        }
+      }
+      return;
     }
-    return;
   }
   public void updateBackstagePasses(Item item)
   {
