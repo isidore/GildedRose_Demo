@@ -10,7 +10,8 @@ public class GildedRoseTest
   @Test
   public void foo()
   {
-    String result = doStuff("foo");
+    String name = "foo";
+    String result = doStuff(name);
     Approvals.verify(result);
   }
   public String doStuff(String name)
