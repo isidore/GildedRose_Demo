@@ -17,6 +17,12 @@ class GildedRose
   }
   public void updateQuality(Item item)
   {
+    if (item.name.equals("Aged Brie"))
+    {
+    }
+    else
+    {
+    }
     updateQuality2(item);
   }
   public void updateQuality2(Item item)
