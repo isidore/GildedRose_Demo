@@ -34,7 +34,7 @@ class GildedRose
     }
     if (isConjured(item))
     {
-      updateSulfuras(item);
+      updateConjured(item);
       return;
     }
     else
@@ -42,6 +42,9 @@ class GildedRose
       updateDefault(item);
       return;
     }
+  }
+  private void updateConjured(Item item)
+  {
   }
   private boolean isConjured(Item item)
   {
