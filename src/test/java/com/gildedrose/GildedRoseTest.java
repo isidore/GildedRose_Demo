@@ -19,7 +19,7 @@ public class GildedRoseTest
   }
   public String doStuff(String name, Integer quality)
   {
-    Item[] items = new Item[]{new Item(name, quality, 0)};
+    Item[] items = new Item[]{new Item(name, 0, quality)};
     GildedRose app = new GildedRose(items);
     app.updateQuality();
     String result = app.items[0].toString();
