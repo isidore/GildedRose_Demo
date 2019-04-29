@@ -6,11 +6,11 @@ public class UpdateBrie
   {
     super();
   }
-  public boolean isBrie(Item item)
+  public boolean isItem(Item item)
   {
     return item.name.equals("Aged Brie");
   }
-  public void updateBrie(Item item)
+  public void update(Item item)
   {
     if (item.quality < 50)
     {

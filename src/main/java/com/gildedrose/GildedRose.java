@@ -18,9 +18,9 @@ class GildedRose
   public void updateQuality(Item item)
   {
     UpdateBrie updater = new UpdateBrie();
-    if (updater.isBrie(item))
+    if (updater.isItem(item))
     {
-      updater.updateBrie(item);
+      updater.update(item);
       return;
     }
     if (isBackstagePasses(item))
