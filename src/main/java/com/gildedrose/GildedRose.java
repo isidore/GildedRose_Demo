@@ -39,7 +39,7 @@ class GildedRose
     }
     else
     {
-      updateDefault(item);
+      updateDefault(item, 1);
       return;
     }
   }
@@ -66,9 +66,9 @@ class GildedRose
   {
     // do nothing
   }
-  public void updateDefault(Item item)
+  public void updateDefault(Item item, int degradeRate)
   {
-    int degrade = 1;
+    int degrade = degradeRate;
     if (item.quality > 0)
     {
       item.quality = item.quality - degrade;
