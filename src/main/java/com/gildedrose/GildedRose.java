@@ -17,7 +17,7 @@ class GildedRose
   }
   public void updateQuality(Item item)
   {
-    if (item.name.equals("Aged Brie"))
+    if (isBrie(item))
     {
       updateBrie(item);
       return;
@@ -37,6 +37,10 @@ class GildedRose
       updateDefault(item);
       return;
     }
+  }
+  public boolean isBrie(Item item)
+  {
+    return item.name.equals("Aged Brie");
   }
   private void updateSulfuras(Item item)
   {
