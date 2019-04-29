@@ -1,15 +1,23 @@
 package com.gildedrose;
 
-public class UpdateBrie
+public class UpdateBrie implements Updater
 {
   public UpdateBrie()
   {
     super();
   }
+  /* (non-Javadoc)
+   * @see com.gildedrose.Updater#isItem(com.gildedrose.Item)
+   */
+  @Override
   public boolean isItem(Item item)
   {
     return item.name.equals("Aged Brie");
   }
+  /* (non-Javadoc)
+   * @see com.gildedrose.Updater#update(com.gildedrose.Item)
+   */
+  @Override
   public void update(Item item)
   {
     if (item.quality < 50)
