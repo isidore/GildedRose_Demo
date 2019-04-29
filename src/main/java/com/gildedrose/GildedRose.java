@@ -22,11 +22,8 @@ class GildedRose
       updateBrie(item);
       return;
     }
-    else
-    {
-      other(item);
-      return;
-    }
+    other(item);
+    return;
   }
   public void other(Item item)
   {
