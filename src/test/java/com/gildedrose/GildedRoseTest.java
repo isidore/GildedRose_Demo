@@ -1,11 +1,10 @@
 package com.gildedrose;
 
 import org.approvaltests.Approvals;
-import org.approvaltests.testcommitrevert.TestCommitRevertRunner;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-@RunWith(TestCommitRevertRunner.class)
+@RunWith(FasterTestCommitRevertRunner.class)
 public class GildedRoseTest
 {
   @Test
@@ -14,7 +13,6 @@ public class GildedRoseTest
     String result = doStuff();
     Approvals.verify(result);
   }
-
   public String doStuff()
   {
     Item[] items = new Item[]{new Item("foo", 0, 0)};
