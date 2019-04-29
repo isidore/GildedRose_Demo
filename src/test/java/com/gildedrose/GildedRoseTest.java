@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-import org.approvaltests.Approvals;
+import org.approvaltests.combinations.CombinationApprovals;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -8,11 +8,10 @@ import org.junit.runner.RunWith;
 public class GildedRoseTest
 {
   @Test
-  public void foo()
+  public void foo() throws Exception
   {
-    String name = "foo";
-    String result = doStuff(name);
-    Approvals.verify(result);
+    String names[] = {"foo"};
+    CombinationApprovals.verifyAllCombinations(this::doStuff, names);
   }
   public String doStuff(String name)
   {
