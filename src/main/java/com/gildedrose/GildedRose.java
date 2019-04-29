@@ -29,12 +29,14 @@ class GildedRose
     }
     if (item.name.equals("Sulfuras, Hand of Ragnaros"))
     {
+      other(item);
+      return;
     }
     else
     {
+      other(item);
+      return;
     }
-    other(item);
-    return;
   }
   public void other(Item item)
   {
