@@ -45,10 +45,11 @@ class GildedRose
   }
   private void updateConjured(Item item)
   {
+    updateDefault(item, 2);
   }
   private boolean isConjured(Item item)
   {
-    return false;
+    return item.name.contains("Conjured");
   }
   public boolean isSulfuras(Item item)
   {
