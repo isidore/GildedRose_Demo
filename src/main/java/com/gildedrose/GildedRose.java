@@ -17,6 +17,10 @@ class GildedRose
   }
   public void updateQuality(Item item)
   {
+    updateQuality2(item);
+  }
+  public void updateQuality2(Item item)
+  {
     if (!item.name.equals("Aged Brie") && !item.name.equals("Backstage passes to a TAFKAL80ETC concert"))
     {
       if (item.quality > 0)
