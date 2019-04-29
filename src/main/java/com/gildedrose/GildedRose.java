@@ -29,9 +29,6 @@ class GildedRose
     }
     if (item.name.equals("Sulfuras, Hand of Ragnaros"))
     {
-      if (item.sellIn < 0)
-      {
-      }
       return;
     }
     else
