@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-class GildedRose extends UpdateBrie
+class GildedRose
 {
   Item[] items;
   public GildedRose(Item[] items)
@@ -17,9 +17,9 @@ class GildedRose extends UpdateBrie
   }
   public void updateQuality(Item item)
   {
-    if (isBrie(item))
+    if (new UpdateBrie().isBrie(item))
     {
-      updateBrie(item);
+      new UpdateBrie().updateBrie(item);
       return;
     }
     if (isBackstagePasses(item))
