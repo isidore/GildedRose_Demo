@@ -44,7 +44,7 @@ class GildedRose
     {
       item.quality = item.quality - degardRate;
     }
-    item.sellIn = item.sellIn - degardRate;
+    item.sellIn = item.sellIn - 1;
     if (item.sellIn < 0)
     {
       if (item.quality > 0)
