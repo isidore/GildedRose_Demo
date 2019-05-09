@@ -33,13 +33,13 @@ class GildedRose
     }
     else
     {
-      updateDefault(item);
+      updateDefault(item, 1);
       return;
     }
   }
-  public void updateDefault(Item item)
+  public void updateDefault(Item item, int degrade)
   {
-    int degardRate = 1;
+    int degardRate = degrade;
     if (item.quality > 0)
     {
       item.quality = item.quality - degardRate;
