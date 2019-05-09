@@ -1,17 +1,18 @@
 package com.gildedrose;
 
-import org.approvaltests.Approvals;
+import org.approvaltests.combinations.CombinationApprovals;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
-public class GildedRoseTest extends FasterTestCommitRevertTest
+@RunWith(FasterTestCommitRevertRunner.class)
+public class GildedRoseTest
 {
   @Test
-  public void foo()
+  public void foo() throws Exception
   {
-    String result = doStuff("foo");
-    Approvals.verify(result);
+    String names[] = {"foo"};
+    CombinationApprovals.verifyAllCombinations(this::doStuff, names);
   }
-
   public String doStuff(String name)
   {
     Item[] items = new Item[]{new Item(name, 0, 0)};
