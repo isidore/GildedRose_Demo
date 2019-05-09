@@ -27,8 +27,10 @@ class GildedRose
       updateBackstagePasses(item);
       return;
     }
-    if (item.name.equals("Sulfuras, Hand of Ragnaros"))
+    if (item.name.equals("Sulfuras, Hand of Ragnaros")) { return; }
+    if (item.name.contains("Conjured"))
     {
+      updateDefault(item, 2);
       return;
     }
     else

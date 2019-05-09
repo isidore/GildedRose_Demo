@@ -1,11 +1,11 @@
 package com.gildedrose;
 
+import org.approvaltests.Approvals;
 import org.approvaltests.combinations.CombinationApprovals;
 import org.approvaltests.legacycode.Range;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
-@RunWith(FasterTestCommitRevertRunner.class)
+//@RunWith(FasterTestCommitRevertRunner.class)
 public class GildedRoseTest
 {
   @Test
@@ -26,5 +26,10 @@ public class GildedRoseTest
     app.updateQuality();
     String result = app.items[0].toString();
     return result;
+  }
+  @Test
+  public void testConjured() throws Exception
+  {
+    Approvals.verify(doStuff("Conjured Pot", 10, 1));
   }
 }
