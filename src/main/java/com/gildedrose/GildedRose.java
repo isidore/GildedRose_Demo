@@ -27,11 +27,8 @@ class GildedRose
       updateBackstagePasses(item);
       return;
     }
-    else
-    {
-      everything(item);
-      return;
-    }
+    everything(item);
+    return;
   }
   public void everything(Item item)
   {
