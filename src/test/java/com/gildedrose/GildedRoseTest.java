@@ -15,11 +15,12 @@ public class GildedRoseTest
                       "Backstage passes to a TAFKAL80ETC concert",
                       "Sulfuras, Hand of Ragnaros"};
     Integer qualities[] = {0, 1, -1, 49, 50, 51};
-    CombinationApprovals.verifyAllCombinations(this::doStuff, names, qualities);
+    Integer sellins[] = {0};
+    CombinationApprovals.verifyAllCombinations(this::doStuff, names, qualities, sellins);
   }
-  public String doStuff(String name, Integer quality)
+  public String doStuff(String name, Integer quality, Integer sellins)
   {
-    Item[] items = new Item[]{new Item(name, 0, quality)};
+    Item[] items = new Item[]{new Item(name, sellins, quality)};
     GildedRose app = new GildedRose(items);
     app.updateQuality();
     String result = app.items[0].toString();
