@@ -24,6 +24,7 @@ class GildedRose
     {
     }
     doStuff2(item);
+    return;
   }
   public void doStuff2(Item item)
   {
