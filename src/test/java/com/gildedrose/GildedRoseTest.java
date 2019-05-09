@@ -10,7 +10,10 @@ public class GildedRoseTest
   @Test
   public void foo() throws Exception
   {
-    String names[] = {"foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert"};
+    String names[] = {"foo",
+                      "Aged Brie",
+                      "Backstage passes to a TAFKAL80ETC concert",
+                      "Sulfuras, Hand of Ragnaros"};
     Integer qualities[] = {0, 1, -1};
     CombinationApprovals.verifyAllCombinations(this::doStuff, names, qualities);
   }
