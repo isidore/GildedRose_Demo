@@ -22,6 +22,12 @@ class GildedRose
       updateQualityForBrie(item);
       return;
     }
+    if (item.name.equals("Backstage passes to a TAFKAL80ETC concert"))
+    {
+    }
+    else
+    {
+    }
     everythingElse(item);
     return;
   }
