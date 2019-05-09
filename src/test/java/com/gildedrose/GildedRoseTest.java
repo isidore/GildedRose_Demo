@@ -1,9 +1,10 @@
 package com.gildedrose;
 
 import org.approvaltests.Approvals;
+import org.approvaltests.testcommitrevert.TestCommitRevertTest;
 import org.junit.Test;
 
-public class GildedRoseTest
+public class GildedRoseTest extends TestCommitRevertTest
 {
   @Test
   public void foo()
