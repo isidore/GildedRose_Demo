@@ -48,7 +48,7 @@ class GildedRose
       {
         if (item.quality > 0)
         {
-          if (!item.name.equals("Sulfuras, Hand of Ragnaros"))
+          if (true)
           {
             item.quality = item.quality - 1;
           }
