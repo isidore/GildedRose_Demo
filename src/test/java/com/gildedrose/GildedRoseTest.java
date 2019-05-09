@@ -1,6 +1,7 @@
 package com.gildedrose;
 
 import org.approvaltests.combinations.CombinationApprovals;
+import org.approvaltests.legacycode.Range;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -15,7 +16,7 @@ public class GildedRoseTest
                       "Backstage passes to a TAFKAL80ETC concert",
                       "Sulfuras, Hand of Ragnaros"};
     Integer qualities[] = {0, 1, -1, 49, 50, 51};
-    Integer sellins[] = {0};
+    Integer sellins[] = Range.get(-1, 15);
     CombinationApprovals.verifyAllCombinations(this::doStuff, names, qualities, sellins);
   }
   public String doStuff(String name, Integer quality, Integer sellins)
