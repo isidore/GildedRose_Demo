@@ -19,7 +19,7 @@ class GildedRose
   {
     if (item.name.equals("Aged Brie"))
     {
-      if (false && !item.name.equals("Backstage passes to a TAFKAL80ETC concert"))
+      if (false)
       {
       }
       else
