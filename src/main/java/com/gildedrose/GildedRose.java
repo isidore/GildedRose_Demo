@@ -32,7 +32,7 @@ class GildedRose
       doStuffForSulfuras(item);
       return;
     }
-    else
+    else if (true)
     {
       doStuffForEverythingElse(item);
       return;
