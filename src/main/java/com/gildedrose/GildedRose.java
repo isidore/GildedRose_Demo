@@ -18,14 +18,15 @@ class GildedRose extends DefualtItem
   private void stuff(Item item)
   {
     AgedBrie that = new AgedBrie();
+    BackstagePasses passes = new BackstagePasses();
     if (that.isAgedBrie(item))
     {
       that.stuffWithAgedBrie(item);
       return;
     }
-    else if (isBackstagePasses(item))
+    else if (this.isBackstagePasses(item))
     {
-      doStuffForBackstagePasses(item);
+      this.doStuffForBackstagePasses(item);
       return;
     }
     else if (isSulfuras(item))
