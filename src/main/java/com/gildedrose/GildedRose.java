@@ -19,12 +19,14 @@ class GildedRose
   {
     if (item.name.equals("Aged Brie"))
     {
+      stuff2(item);
+      return;
     }
     else
     {
+      stuff2(item);
+      return;
     }
-    stuff2(item);
-    return;
   }
   private void stuff2(Item item)
   {
