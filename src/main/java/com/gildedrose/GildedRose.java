@@ -16,6 +16,11 @@ class GildedRose {
 
     private void stuff(Item item)
     {
+      stuff2(item);
+    }
+
+    private void stuff2(Item item)
+    {
       if (!item.name.equals("Aged Brie")
               && !item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
           if (item.quality > 0) {
