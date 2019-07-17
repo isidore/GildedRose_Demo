@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-class GildedRose extends AgedBrie
+class GildedRose extends BackstagePasses
 {
   Item[] items;
   public GildedRose(Item[] items)
@@ -46,10 +46,6 @@ class GildedRose extends AgedBrie
   {
     return item.name.equals("Sulfuras, Hand of Ragnaros");
   }
-  private boolean isBackstagePasses(Item item)
-  {
-    return item.name.equals("Backstage passes to a TAFKAL80ETC concert");
-  }
   private void doStuffForSulfuras(Item item)
   {
     // TODO Auto-generated method stub
@@ -64,33 +60,6 @@ class GildedRose extends AgedBrie
     if (item.sellIn < 0 && item.quality > 0)
     {
       item.quality = item.quality - 1;
-    }
-    return;
-  }
-  private void doStuffForBackstagePasses(Item item)
-  {
-    if (item.quality < 50)
-    {
-      item.quality = item.quality + 1;
-      if (item.sellIn < 11)
-      {
-        if (item.quality < 50)
-        {
-          item.quality = item.quality + 1;
-        }
-      }
-      if (item.sellIn < 6)
-      {
-        if (item.quality < 50)
-        {
-          item.quality = item.quality + 1;
-        }
-      }
-    }
-    item.sellIn = item.sellIn - 1;
-    if (item.sellIn < 0)
-    {
-      item.quality = item.quality - item.quality;
     }
     return;
   }
