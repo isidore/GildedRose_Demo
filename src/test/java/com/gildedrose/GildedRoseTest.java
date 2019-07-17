@@ -1,11 +1,11 @@
 package com.gildedrose;
 
+import org.approvaltests.Approvals;
 import org.approvaltests.combinations.CombinationApprovals;
 import org.approvaltests.legacycode.Range;
-import org.approvaltests.testcommitrevert.TestCommitRevertTest;
 import org.junit.Test;
 
-public class GildedRoseTest extends TestCommitRevertTest
+public class GildedRoseTest //extends TestCommitRevertTest
 {
   @Test
   public void foo()
@@ -25,5 +25,10 @@ public class GildedRoseTest extends TestCommitRevertTest
     app.updateQuality();
     String result = app.items[0].toString();
     return result;
+  }
+  @Test
+  public void testConjured() throws Exception
+  {
+    Approvals.verify(doStuff("Conjured Wine", 5, 10));
   }
 }
