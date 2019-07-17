@@ -21,22 +21,22 @@ class GildedRose
     BackstagePasses passes = new BackstagePasses();
     Sulfuras sulfuras = new Sulfuras();
     DefualtItem defaultItem = new DefualtItem();
-    if (agedBrie.isAgedBrie(item))
+    if (agedBrie.isItem(item))
     {
       agedBrie.stuffWithAgedBrie(item);
       return;
     }
-    else if (passes.isBackstagePasses(item))
+    else if (passes.isItem(item))
     {
       passes.doStuffForBackstagePasses(item);
       return;
     }
-    else if (sulfuras.isSulfuras(item))
+    else if (sulfuras.isItem(item))
     {
       sulfuras.doStuffForSulfuras(item);
       return;
     }
-    else if (defaultItem.isDefault())
+    else if (defaultItem.isItem())
     {
       defaultItem.doStuffForEverythingElse(item);
       return;

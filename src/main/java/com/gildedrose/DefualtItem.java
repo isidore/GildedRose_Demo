@@ -6,7 +6,7 @@ public class DefualtItem
   {
     super();
   }
-  protected boolean isDefault()
+  protected boolean isItem()
   {
     return true;
   }

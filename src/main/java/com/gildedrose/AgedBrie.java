@@ -7,7 +7,7 @@ public class AgedBrie
     super();
   }
 
-  protected boolean isAgedBrie(Item item)
+  protected boolean isItem(Item item)
   {
     return item.name.equals("Aged Brie");
   }
