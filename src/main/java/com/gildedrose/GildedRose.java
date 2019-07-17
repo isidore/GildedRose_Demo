@@ -24,12 +24,14 @@ class GildedRose
     }
     if (item.name.equals("Backstage passes to a TAFKAL80ETC concert"))
     {
+      otherStuff(item);
+      return;
     }
     else
     {
+      otherStuff(item);
+      return;
     }
-    otherStuff(item);
-    return;
   }
   private void otherStuff(Item item)
   {
