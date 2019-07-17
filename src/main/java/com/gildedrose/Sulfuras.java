@@ -10,7 +10,7 @@ public class Sulfuras
   {
     return item.name.equals("Sulfuras, Hand of Ragnaros");
   }
-  protected void doStuffForSulfuras(Item item)
+  protected void updateQuality(Item item)
   {
     // TODO Auto-generated method stub
   }

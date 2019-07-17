@@ -10,7 +10,7 @@ public class BackstagePasses
   {
     return item.name.equals("Backstage passes to a TAFKAL80ETC concert");
   }
-  protected void doStuffForBackstagePasses(Item item)
+  protected void updateQuality(Item item)
   {
     if (item.quality < 50)
     {

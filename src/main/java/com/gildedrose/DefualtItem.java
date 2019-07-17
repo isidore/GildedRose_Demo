@@ -10,7 +10,7 @@ public class DefualtItem
   {
     return true;
   }
-  protected void doStuffForEverythingElse(Item item)
+  protected void updateQuality(Item item)
   {
     if (item.quality > 0)
     {

@@ -23,22 +23,22 @@ class GildedRose
     DefualtItem defaultItem = new DefualtItem();
     if (agedBrie.isItem(item))
     {
-      agedBrie.stuffWithAgedBrie(item);
+      agedBrie.updateQuality(item);
       return;
     }
     else if (passes.isItem(item))
     {
-      passes.doStuffForBackstagePasses(item);
+      passes.updateQuality(item);
       return;
     }
     else if (sulfuras.isItem(item))
     {
-      sulfuras.doStuffForSulfuras(item);
+      sulfuras.updateQuality(item);
       return;
     }
     else if (defaultItem.isItem())
     {
-      defaultItem.doStuffForEverythingElse(item);
+      defaultItem.updateQuality(item);
       return;
     }
   }
