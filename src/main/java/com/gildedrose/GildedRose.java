@@ -22,11 +22,8 @@ class GildedRose
       stuffWithAgedBrie(item);
       return;
     }
-    else
-    {
-      otherStuff(item);
-      return;
-    }
+    otherStuff(item);
+    return;
   }
   private void otherStuff(Item item)
   {
