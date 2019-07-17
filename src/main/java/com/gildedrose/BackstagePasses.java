@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-public class BackstagePasses
+public class BackstagePasses implements ItemUpdater
 {
   public BackstagePasses()
   {
