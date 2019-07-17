@@ -30,9 +30,9 @@ class GildedRose extends DefualtItem
       passes.doStuffForBackstagePasses(item);
       return;
     }
-    else if (isSulfuras(item))
+    else if (sulfuras.isSulfuras(item))
     {
-      doStuffForSulfuras(item);
+      sulfuras.doStuffForSulfuras(item);
       return;
     }
     else if (isDefault())
