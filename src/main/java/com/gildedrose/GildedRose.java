@@ -29,23 +29,28 @@ class GildedRose
     }
     else
     {
-      if (item.quality > 0)
-      {
-        if (!item.name.equals("Sulfuras, Hand of Ragnaros"))
-        {
-          item.quality = item.quality - 1;
-        }
-      }
+      doOther(item);
+      return;
+    }
+  }
+  private void doOther(Item item)
+  {
+    if (item.quality > 0)
+    {
       if (!item.name.equals("Sulfuras, Hand of Ragnaros"))
-      {
-        item.sellIn = item.sellIn - 1;
-      }
-      if (item.sellIn < 0 && item.quality > 0 && !item.name.equals("Sulfuras, Hand of Ragnaros"))
       {
         item.quality = item.quality - 1;
       }
-      return;
     }
+    if (!item.name.equals("Sulfuras, Hand of Ragnaros"))
+    {
+      item.sellIn = item.sellIn - 1;
+    }
+    if (item.sellIn < 0 && item.quality > 0 && !item.name.equals("Sulfuras, Hand of Ragnaros"))
+    {
+      item.quality = item.quality - 1;
+    }
+    return;
   }
   private void doStuffForBackstagePasses(Item item)
   {
