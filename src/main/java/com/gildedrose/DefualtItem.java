@@ -1,17 +1,15 @@
 package com.gildedrose;
 
-public class DefualtItem extends Sulfuras
+public class DefualtItem
 {
   public DefualtItem()
   {
     super();
   }
-
   protected boolean isDefault()
   {
     return true;
   }
-
   protected void doStuffForEverythingElse(Item item)
   {
     if (item.quality > 0)
