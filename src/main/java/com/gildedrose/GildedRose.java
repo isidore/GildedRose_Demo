@@ -17,9 +17,10 @@ class GildedRose extends DefualtItem
   }
   private void stuff(Item item)
   {
-    if (isAgedBrie(item))
+    GildedRose that = this;
+    if (that.isAgedBrie(item))
     {
-      stuffWithAgedBrie(item);
+      that.stuffWithAgedBrie(item);
       return;
     }
     else if (isBackstagePasses(item))
