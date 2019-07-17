@@ -12,10 +12,10 @@ class GildedRose
     for (int i = 0; i < items.length; i++)
     {
       Item item = items[i];
-      stuff(item);
+      updateQualityForItem(item);
     }
   }
-  private void stuff(Item item)
+  private void updateQualityForItem(Item item)
   {
     AgedBrie agedBrie = new AgedBrie();
     BackstagePasses passes = new BackstagePasses();
