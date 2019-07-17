@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-import org.approvaltests.Approvals;
+import org.approvaltests.combinations.CombinationApprovals;
 import org.junit.Test;
 
 public class GildedRoseTest
@@ -8,11 +8,9 @@ public class GildedRoseTest
   @Test
   public void foo()
   {
-    String name = "foo";
-    String result = doStuff(name);
-    Approvals.verify(result);
+    String names[] = {"foo"};
+    CombinationApprovals.verifyAllCombinations(this::doStuff, names);
   }
-
   private String doStuff(String name)
   {
     Item[] items = new Item[]{new Item(name, 0, 0)};
