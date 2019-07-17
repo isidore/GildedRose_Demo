@@ -24,6 +24,7 @@ class GildedRose
     {
     }
     stuff2(item);
+    return;
   }
   private void stuff2(Item item)
   {
