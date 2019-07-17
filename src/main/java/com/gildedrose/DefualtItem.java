@@ -7,7 +7,7 @@ public class DefualtItem implements ItemUpdater
     super();
   }
   @Override
-  public boolean isItem()
+  public boolean isItem(Item item)
   {
     return true;
   }

@@ -2,6 +2,6 @@ package com.gildedrose;
 
 public interface ItemUpdater
 {
-  boolean isItem();
+  boolean isItem(Item item);
   void updateQuality(Item item);
 }

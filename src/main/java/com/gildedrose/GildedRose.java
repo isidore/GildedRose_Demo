@@ -36,7 +36,7 @@ class GildedRose
       sulfuras.updateQuality(item);
       return;
     }
-    else if (defaultItem.isItem())
+    else if (defaultItem.isItem(item))
     {
       defaultItem.updateQuality(item);
       return;
