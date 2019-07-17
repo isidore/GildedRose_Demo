@@ -17,7 +17,7 @@ class GildedRose extends DefualtItem
   }
   private void stuff(Item item)
   {
-    GildedRose that = this;
+    AgedBrie that = new AgedBrie();
     if (that.isAgedBrie(item))
     {
       that.stuffWithAgedBrie(item);
