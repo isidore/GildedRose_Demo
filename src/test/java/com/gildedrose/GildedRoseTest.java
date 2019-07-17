@@ -8,7 +8,7 @@ public class GildedRoseTest
   @Test
   public void foo()
   {
-    String names[] = {"foo"};
+    String names[] = {"foo", "Aged Brie"};
     CombinationApprovals.verifyAllCombinations(this::doStuff, names);
   }
   private String doStuff(String name)
