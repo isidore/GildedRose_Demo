@@ -19,7 +19,7 @@ class GildedRose extends DefualtItem
   {
     AgedBrie that = new AgedBrie();
     BackstagePasses passes = new BackstagePasses();
-    Sulfuras sulfusras = new Sulfuras();
+    Sulfuras sulfuras = new Sulfuras();
     if (that.isAgedBrie(item))
     {
       that.stuffWithAgedBrie(item);
