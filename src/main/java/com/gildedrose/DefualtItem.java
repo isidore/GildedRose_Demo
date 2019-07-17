@@ -16,7 +16,7 @@ public class DefualtItem implements ItemUpdater
   {
     updateDefaultItemQuality(item, 1);
   }
-  private void updateDefaultItemQuality(Item item, int qualityRate)
+  public static void updateDefaultItemQuality(Item item, int qualityRate)
   {
     if (item.quality > 0)
     {
