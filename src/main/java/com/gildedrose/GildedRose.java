@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-class GildedRose extends BackstagePasses
+class GildedRose extends Sulfuras
 {
   Item[] items;
   public GildedRose(Item[] items)
@@ -41,14 +41,6 @@ class GildedRose extends BackstagePasses
   private boolean isDefault()
   {
     return true;
-  }
-  private boolean isSulfuras(Item item)
-  {
-    return item.name.equals("Sulfuras, Hand of Ragnaros");
-  }
-  private void doStuffForSulfuras(Item item)
-  {
-    // TODO Auto-generated method stub
   }
   private void doStuffForEverythingElse(Item item)
   {
