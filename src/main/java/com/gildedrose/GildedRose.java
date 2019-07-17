@@ -17,16 +17,19 @@ class GildedRose
   }
   private void updateQualityForItem(Item item)
   {
-    ItemUpdater agedBrie = new AgedBrie();
+    ItemUpdater updaters[] = {new AgedBrie()};
     ItemUpdater passes = new BackstagePasses();
     ItemUpdater sulfuras = new Sulfuras();
     ItemUpdater defaultItem = new DefualtItem();
-    if (agedBrie.isItem(item))
+    for (ItemUpdater itemUpdater : updaters)
     {
-      agedBrie.updateQuality(item);
-      return;
+      if (itemUpdater.isItem(item))
+      {
+        itemUpdater.updateQuality(item);
+        return;
+      }
     }
-    else if (passes.isItem(item))
+    if (passes.isItem(item))
     {
       passes.updateQuality(item);
       return;
