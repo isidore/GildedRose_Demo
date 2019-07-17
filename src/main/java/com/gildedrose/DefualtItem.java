@@ -14,8 +14,7 @@ public class DefualtItem implements ItemUpdater
   @Override
   public void updateQuality(Item item)
   {
-    int qualityRate = 1;
-    updateDefaultItemQuality(item, qualityRate);
+    updateDefaultItemQuality(item, 1);
   }
   private void updateDefaultItemQuality(Item item, int qualityRate)
   {
