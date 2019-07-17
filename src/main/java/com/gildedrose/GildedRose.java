@@ -17,8 +17,7 @@ class GildedRose
   }
   private void updateQualityForItem(Item item)
   {
-    ItemUpdater updaters[] = {new AgedBrie()};
-    ItemUpdater passes = new BackstagePasses();
+    ItemUpdater updaters[] = {new AgedBrie(), new BackstagePasses()};
     ItemUpdater sulfuras = new Sulfuras();
     ItemUpdater defaultItem = new DefualtItem();
     for (ItemUpdater itemUpdater : updaters)
@@ -29,12 +28,7 @@ class GildedRose
         return;
       }
     }
-    if (passes.isItem(item))
-    {
-      passes.updateQuality(item);
-      return;
-    }
-    else if (sulfuras.isItem(item))
+    if (sulfuras.isItem(item))
     {
       sulfuras.updateQuality(item);
       return;
