@@ -6,11 +6,11 @@ public class BackstagePasses
   {
     super();
   }
-  protected boolean isItem(Item item)
+  public boolean isItem(Item item)
   {
     return item.name.equals("Backstage passes to a TAFKAL80ETC concert");
   }
-  protected void updateQuality(Item item)
+  public void updateQuality(Item item)
   {
     if (item.quality < 50)
     {

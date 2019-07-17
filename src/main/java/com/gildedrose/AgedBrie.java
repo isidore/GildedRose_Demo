@@ -6,13 +6,11 @@ public class AgedBrie
   {
     super();
   }
-
-  protected boolean isItem(Item item)
+  public boolean isItem(Item item)
   {
     return item.name.equals("Aged Brie");
   }
-
-  protected void updateQuality(Item item)
+  public void updateQuality(Item item)
   {
     if (item.quality < 50)
     {

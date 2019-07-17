@@ -6,11 +6,11 @@ public class Sulfuras
   {
     super();
   }
-  protected boolean isItem(Item item)
+  public boolean isItem(Item item)
   {
     return item.name.equals("Sulfuras, Hand of Ragnaros");
   }
-  protected void updateQuality(Item item)
+  public void updateQuality(Item item)
   {
     // TODO Auto-generated method stub
   }

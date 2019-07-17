@@ -6,11 +6,11 @@ public class DefualtItem
   {
     super();
   }
-  protected boolean isItem()
+  public boolean isItem()
   {
     return true;
   }
-  protected void updateQuality(Item item)
+  public void updateQuality(Item item)
   {
     if (item.quality > 0)
     {
