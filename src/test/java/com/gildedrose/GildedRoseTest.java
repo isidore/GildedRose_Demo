@@ -12,7 +12,7 @@ public class GildedRoseTest
                       "Aged Brie",
                       "Backstage passes to a TAFKAL80ETC concert",
                       "Sulfuras, Hand of Ragnaros"};
-    Integer[] qualities = {0};
+    Integer[] qualities = {0, -1, 1};
     CombinationApprovals.verifyAllCombinations(this::doStuff, names, qualities);
   }
   private String doStuff(String name, Integer quality)
