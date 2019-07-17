@@ -17,7 +17,7 @@ class GildedRose
   }
   private void stuff(Item item)
   {
-    if (item.name.equals("Aged Brie"))
+    if (isAgedBrie(item))
     {
       stuffWithAgedBrie(item);
       return;
@@ -37,6 +37,10 @@ class GildedRose
       doStuffForEverythingElse(item);
       return;
     }
+  }
+  private boolean isAgedBrie(Item item)
+  {
+    return item.name.equals("Aged Brie");
   }
   private void doStuffForSulfuras(Item item)
   {
