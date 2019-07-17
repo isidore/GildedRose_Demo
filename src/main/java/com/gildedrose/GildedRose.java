@@ -22,12 +22,12 @@ class GildedRose
       stuffWithAgedBrie(item);
       return;
     }
-    if (item.name.equals("Backstage passes to a TAFKAL80ETC concert"))
+    else if (item.name.equals("Backstage passes to a TAFKAL80ETC concert"))
     {
       doStuffForBackstagePasses(item);
       return;
     }
-    if (item.name.equals("Sulfuras, Hand of Ragnaros"))
+    else if (item.name.equals("Sulfuras, Hand of Ragnaros"))
     {
       doStuffForSulfuras(item);
       return;
