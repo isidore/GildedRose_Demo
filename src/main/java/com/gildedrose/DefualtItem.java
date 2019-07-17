@@ -1,15 +1,17 @@
 package com.gildedrose;
 
-public class DefualtItem
+public class DefualtItem implements ItemUpdater
 {
   public DefualtItem()
   {
     super();
   }
+  @Override
   public boolean isItem()
   {
     return true;
   }
+  @Override
   public void updateQuality(Item item)
   {
     if (item.quality > 0)
