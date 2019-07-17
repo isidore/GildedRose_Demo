@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-public class Sulfuras
+public class Sulfuras implements ItemUpdater
 {
   public Sulfuras()
   {

@@ -19,7 +19,7 @@ class GildedRose
   {
     AgedBrie agedBrie = new AgedBrie();
     BackstagePasses passes = new BackstagePasses();
-    Sulfuras sulfuras = new Sulfuras();
+    ItemUpdater sulfuras = new Sulfuras();
     ItemUpdater defaultItem = new DefualtItem();
     if (agedBrie.isItem(item))
     {
