@@ -8,7 +8,8 @@ public class GildedRoseTest
   @Test
   public void foo()
   {
-    Item[] items = new Item[]{new Item("foo", 0, 0)};
+    String name = "foo";
+    Item[] items = new Item[]{new Item(name, 0, 0)};
     GildedRose app = new GildedRose(items);
     app.updateQuality();
     String result = app.items[0].toString();
