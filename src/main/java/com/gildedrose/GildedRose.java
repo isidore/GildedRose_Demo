@@ -36,9 +36,9 @@ class GildedRose extends DefualtItem
       sulfuras.doStuffForSulfuras(item);
       return;
     }
-    else if (isDefault())
+    else if (defaultItem.isDefault())
     {
-      doStuffForEverythingElse(item);
+      defaultItem.doStuffForEverythingElse(item);
       return;
     }
   }
