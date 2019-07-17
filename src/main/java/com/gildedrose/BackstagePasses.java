@@ -1,17 +1,15 @@
 package com.gildedrose;
 
-public class BackstagePasses extends AgedBrie
+public class BackstagePasses
 {
   public BackstagePasses()
   {
     super();
   }
-
   protected boolean isBackstagePasses(Item item)
   {
     return item.name.equals("Backstage passes to a TAFKAL80ETC concert");
   }
-
   protected void doStuffForBackstagePasses(Item item)
   {
     if (item.quality < 50)
