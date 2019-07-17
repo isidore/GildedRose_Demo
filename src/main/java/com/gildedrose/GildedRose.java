@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-class GildedRose extends DefualtItem
+class GildedRose
 {
   Item[] items;
   public GildedRose(Item[] items)
