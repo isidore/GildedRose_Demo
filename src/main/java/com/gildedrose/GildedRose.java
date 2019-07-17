@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-class GildedRose
+class GildedRose extends AgedBrie
 {
   Item[] items;
   public GildedRose(Item[] items)
@@ -50,10 +50,6 @@ class GildedRose
   {
     return item.name.equals("Backstage passes to a TAFKAL80ETC concert");
   }
-  private boolean isAgedBrie(Item item)
-  {
-    return item.name.equals("Aged Brie");
-  }
   private void doStuffForSulfuras(Item item)
   {
     // TODO Auto-generated method stub
@@ -95,22 +91,6 @@ class GildedRose
     if (item.sellIn < 0)
     {
       item.quality = item.quality - item.quality;
-    }
-    return;
-  }
-  private void stuffWithAgedBrie(Item item)
-  {
-    if (item.quality < 50)
-    {
-      item.quality = item.quality + 1;
-    }
-    item.sellIn = item.sellIn - 1;
-    if (item.sellIn < 0)
-    {
-      if (item.quality < 50)
-      {
-        item.quality = item.quality + 1;
-      }
     }
     return;
   }
