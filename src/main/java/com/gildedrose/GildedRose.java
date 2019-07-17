@@ -27,16 +27,24 @@ class GildedRose
       doStuffForBackstagePasses(item);
       return;
     }
-    else if (item.name.equals("Sulfuras, Hand of Ragnaros"))
+    else if (isSulfuras(item))
     {
       doStuffForSulfuras(item);
       return;
     }
-    else if (true)
+    else if (isDefault())
     {
       doStuffForEverythingElse(item);
       return;
     }
+  }
+  private boolean isDefault()
+  {
+    return true;
+  }
+  private boolean isSulfuras(Item item)
+  {
+    return item.name.equals("Sulfuras, Hand of Ragnaros");
   }
   private boolean isBackstagePasses(Item item)
   {
