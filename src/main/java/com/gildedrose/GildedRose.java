@@ -24,9 +24,9 @@ class GildedRose extends DefualtItem
       that.stuffWithAgedBrie(item);
       return;
     }
-    else if (this.isBackstagePasses(item))
+    else if (passes.isBackstagePasses(item))
     {
-      this.doStuffForBackstagePasses(item);
+      passes.doStuffForBackstagePasses(item);
       return;
     }
     else if (isSulfuras(item))
