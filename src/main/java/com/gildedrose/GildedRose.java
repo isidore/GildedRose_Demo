@@ -17,13 +17,13 @@ class GildedRose
   }
   private void stuff(Item item)
   {
-    AgedBrie that = new AgedBrie();
+    AgedBrie agedBrie = new AgedBrie();
     BackstagePasses passes = new BackstagePasses();
     Sulfuras sulfuras = new Sulfuras();
     DefualtItem defaultItem = new DefualtItem();
-    if (that.isAgedBrie(item))
+    if (agedBrie.isAgedBrie(item))
     {
-      that.stuffWithAgedBrie(item);
+      agedBrie.stuffWithAgedBrie(item);
       return;
     }
     else if (passes.isBackstagePasses(item))
