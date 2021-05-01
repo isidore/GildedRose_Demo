@@ -13,7 +13,7 @@
 //    GitCommitOrRevert.askForCommitMessage = () -> {
 //      try
 //      {
-//        Process exec = Runtime.getRuntime().exec("osascript /Users/llewellyn/Dialog.scpt");
+//        Process exec = Runtime.getRuntime().exec("osascript /Users/llewellynfalco/Dialog.scpt");
 //        exec.waitFor();
 //        return FileUtils.readStream(exec.getInputStream());
 //      }

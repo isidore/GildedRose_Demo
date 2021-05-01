@@ -1,6 +1,5 @@
 package com.gildedrose;
 
-import com.github.larseckart.tcr.TestCommitRevertExtension;
 import com.github.larseckart.tcr.TestCommitRevertMainExtension;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
