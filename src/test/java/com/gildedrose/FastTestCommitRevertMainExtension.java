@@ -5,10 +5,11 @@ import com.github.larseckart.tcr.TestCommitRevertMainExtension;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.Path;
 
 public class FastTestCommitRevertMainExtension extends TestCommitRevertMainExtension {
 
-    public static final String SCRIPT_PATH = "Dialog.scpt";
+    public static String SCRIPT_PATH = null;
 
     @Override
     protected String getCommitMessage() {
@@ -32,13 +33,15 @@ public class FastTestCommitRevertMainExtension extends TestCommitRevertMainExten
     }
 
     private void ensureApplescript() throws IOException {
-        File script = new File(SCRIPT_PATH);
-        if (!script.exists())
+        if (SCRIPT_PATH == null)
         {
+            Path dialog = Files.createTempFile("Dialog", ".scpt");
+
             String text = "set theResponse to display dialog \"Commit Message?\" default answer \"\" with icon note buttons {\"Cancel\", \"Continue\"} default button \"Continue\"\n" +
                     "--> {button returned:\"Continue\", text returned:\"Jen\"}\n" +
                     "copy (text returned of theResponse) to stdout";
-            Files.writeString(script.toPath(), text);
+            Files.writeString(dialog, text);
+            SCRIPT_PATH = dialog.toAbsolutePath().toString();
         }
     }
 
