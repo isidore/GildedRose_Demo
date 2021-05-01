@@ -7,11 +7,14 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 
 public class FastTestCommitRevertMainExtension extends TestCommitRevertMainExtension {
+
+    public static final String SCRIPT_PATH = "Dialog.scpt";
+
     @Override
     protected String getCommitMessage() {
         try {
             ensureApplescript();
-            Process exec = Runtime.getRuntime().exec("osascript /Users/llewellynfalco/Dialog.scpt");
+            Process exec = Runtime.getRuntime().exec("osascript " + SCRIPT_PATH);
             exec.waitFor();
             InputStream inputStream = exec.getErrorStream();
             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8));
@@ -29,7 +32,7 @@ public class FastTestCommitRevertMainExtension extends TestCommitRevertMainExten
     }
 
     private void ensureApplescript() throws IOException {
-        File script = new File("/Users/llewellynfalco/Dialog.scpt");
+        File script = new File(SCRIPT_PATH);
         if (!script.exists())
         {
             String text = "set theResponse to display dialog \"Commit Message?\" default answer \"\" with icon note buttons {\"Cancel\", \"Continue\"} default button \"Continue\"\n" +
