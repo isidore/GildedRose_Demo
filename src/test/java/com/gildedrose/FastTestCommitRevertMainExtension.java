@@ -16,7 +16,7 @@ public class FastTestCommitRevertMainExtension extends TestCommitRevertMainExten
             ensureApplescript();
             Process exec = Runtime.getRuntime().exec("osascript " + SCRIPT_PATH);
             exec.waitFor();
-            InputStream inputStream = exec.getErrorStream();
+            InputStream inputStream = exec.getInputStream();
             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8));
             StringBuffer string = new StringBuffer();
             while (reader.ready()) {
@@ -37,7 +37,7 @@ public class FastTestCommitRevertMainExtension extends TestCommitRevertMainExten
         {
             String text = "set theResponse to display dialog \"Commit Message?\" default answer \"\" with icon note buttons {\"Cancel\", \"Continue\"} default button \"Continue\"\n" +
                     "--> {button returned:\"Continue\", text returned:\"Jen\"}\n" +
-                    "log (text returned of theResponse)";
+                    "copy (text returned of theResponse) to stdout";
             Files.writeString(script.toPath(), text);
         }
     }
