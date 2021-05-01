@@ -2,15 +2,15 @@ package com.gildedrose;
 
 import com.github.larseckart.tcr.TestCommitRevertMainExtension;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 
 public class FastTestCommitRevertMainExtension extends TestCommitRevertMainExtension {
     @Override
     protected String getCommitMessage() {
         try {
+            ensureApplescript();
             Process exec = Runtime.getRuntime().exec("osascript /Users/llewellynfalco/Dialog.scpt");
             exec.waitFor();
             InputStream inputStream = exec.getErrorStream();
@@ -18,14 +18,24 @@ public class FastTestCommitRevertMainExtension extends TestCommitRevertMainExten
             StringBuffer string = new StringBuffer();
             while (reader.ready()) {
                 string.append(reader.readLine());
-                string.append("\n");
             }
             reader.close();
-            String commitMessage = string.toString();
+            String commitMessage = string.toString().trim();
             System.out.println("message: " + commitMessage);
             return commitMessage;
         } catch (Throwable t) {
             throw throwAsError(t);
+        }
+    }
+
+    private void ensureApplescript() throws IOException {
+        File script = new File("/Users/llewellynfalco/Dialog.scpt");
+        if (!script.exists())
+        {
+            String text = "set theResponse to display dialog \"Commit Message?\" default answer \"\" with icon note buttons {\"Cancel\", \"Continue\"} default button \"Continue\"\n" +
+                    "--> {button returned:\"Continue\", text returned:\"Jen\"}\n" +
+                    "log (text returned of theResponse)";
+            Files.writeString(script.toPath(), text);
         }
     }
 
