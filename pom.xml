@@ -23,9 +23,11 @@
         <dependency>
             <groupId>com.github.larseckart</groupId>
             <artifactId>tcr-extension</artifactId>
-            <version>0.5.0</version>
-<!--            <systemPath>${project.basedir}/lib/tcr-extension.jar</systemPath>-->
+            <version>0.6.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/tcr-extension.jar</systemPath>
         </dependency>
+
     </dependencies>
 
     <build>
