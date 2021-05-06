@@ -14,6 +14,10 @@ class GildedRose {
     }
 
     private void applesauce(Item item) {
+        applesauce2(item);
+    }
+
+    private void applesauce2(Item item) {
         if (!item.name.equals("Aged Brie")
                 && !item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
             if (item.quality > 0) {
