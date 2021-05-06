@@ -5,8 +5,6 @@ import org.approvaltests.combinations.CombinationApprovals;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 @ExtendWith(FastTestCommitRevertMainExtension.class)
 
 
@@ -14,8 +12,8 @@ public class GildedRoseTest {
 
     @Test
     public void foo() {
-        String names[] = {"foo","Aged Brie","Backstage passes to a TAFKAL80ETC concert"};
-            Integer qualities[] = {0};
+        String names[] = {"foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert"};
+        Integer qualities[] = {0};
         CombinationApprovals.verifyAllCombinations(this::doStuff, names, qualities);
     }
 
