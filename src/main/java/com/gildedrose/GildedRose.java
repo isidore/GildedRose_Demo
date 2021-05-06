@@ -9,11 +9,11 @@ class GildedRose {
 
     public void updateQuality() {
         for (Item item : items) {
-            applesauce(item);
+            updateQualityForItem(item);
         }
     }
 
-    private void applesauce(Item item) {
+    private void updateQualityForItem(Item item) {
         if (item.name.equals("Aged Brie")) {
             applesauceAgedBrie(item);
             return;
