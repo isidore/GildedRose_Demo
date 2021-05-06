@@ -2,6 +2,7 @@ package com.gildedrose;
 
 import com.github.larseckart.tcr.FastTestCommitRevertMainExtension;
 import org.approvaltests.combinations.CombinationApprovals;
+import org.approvaltests.legacycode.Range;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
@@ -14,7 +15,7 @@ public class GildedRoseTest {
     public void foo() {
         String names[] = {"foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert","Sulfuras, Hand of Ragnaros"};
         Integer qualities[] = {0,-1,1,49,50,51};
-        Integer[] sellIns = {0};
+        Integer[] sellIns = Range.get(-1,12);
         CombinationApprovals.verifyAllCombinations(this::doStuff, names, sellIns, qualities);
     }
 
