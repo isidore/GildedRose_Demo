@@ -2,6 +2,7 @@ package com.gildedrose;
 
 import com.github.larseckart.tcr.FastTestCommitRevertMainExtension;
 import org.approvaltests.Approvals;
+import org.approvaltests.combinations.CombinationApprovals;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
@@ -14,9 +15,8 @@ public class GildedRoseTest {
 
     @Test
     public void foo() {
-        String name[] = {"foo"};
-        String result = doStuff(name[0]);
-        Approvals.verify(result);
+        String names[] = {"foo"};
+        CombinationApprovals.verifyAllCombinations(this::doStuff, names);
     }
 
     private String doStuff(String name) {
