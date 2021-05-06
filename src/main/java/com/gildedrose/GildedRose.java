@@ -15,7 +15,7 @@ class GildedRose {
 
     private void updateQualityForItem(Item item) {
         if (item.name.equals("Aged Brie")) {
-            applesauceAgedBrie(item);
+            updateQualityForAgedBrie(item);
             return;
         }
         applesauceEverythingElse(item);
@@ -68,7 +68,7 @@ class GildedRose {
         }
     }
 
-    private void applesauceAgedBrie(Item item) {
+    private void updateQualityForAgedBrie(Item item) {
         if (item.quality < 50) {
             item.quality = item.quality + 1;
 
