@@ -19,6 +19,7 @@ class GildedRose {
         } else {
             applesauceEverythingElse(item);
         }
+        return;
     }
 
     private void applesauceEverythingElse(Item item) {
