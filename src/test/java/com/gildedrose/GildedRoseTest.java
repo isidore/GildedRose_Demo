@@ -14,8 +14,8 @@ public class GildedRoseTest {
 
     @Test
     public void foo() {
-        String name = "foo";
-        String result = doStuff(name);
+        String name[] = {"foo"};
+        String result = doStuff(name[0]);
         Approvals.verify(result);
     }
 
