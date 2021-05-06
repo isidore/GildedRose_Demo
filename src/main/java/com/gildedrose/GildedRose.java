@@ -18,8 +18,15 @@ class GildedRose {
             updateQualityForAgedBrie(item);
             return;
         }
-        applesauceEverythingElse(item);
-        return;
+        if (true) {
+            applesauceEverythingElse(item);
+            return;
+
+        } else {
+
+            applesauceEverythingElse(item);
+            return;
+        }
     }
 
     private void applesauceEverythingElse(Item item) {
