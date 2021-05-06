@@ -16,10 +16,11 @@ class GildedRose {
     private void applesauce(Item item) {
         if (item.name.equals("Aged Brie")) {
             applesauceAgedBrie(item);
+            return;
         } else {
             applesauceEverythingElse(item);
+            return;
         }
-        return;
     }
 
     private void applesauceEverythingElse(Item item) {
