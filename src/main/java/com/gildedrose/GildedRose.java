@@ -15,14 +15,9 @@ class GildedRose {
 
     private void applesauce(Item item) {
         if (item.name.equals("Aged Brie")) {
-            if (false) {
+            if (item.quality < 50) {
+                item.quality = item.quality + 1;
 
-
-            } else {
-                if (item.quality < 50) {
-                    item.quality = item.quality + 1;
-
-                }
             }
 
             if (!item.name.equals("Sulfuras, Hand of Ragnaros")) {
