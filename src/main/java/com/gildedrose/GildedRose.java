@@ -17,10 +17,9 @@ class GildedRose {
         if (item.name.equals("Aged Brie")) {
             applesauceAgedBrie(item);
             return;
-        } else {
-            applesauceEverythingElse(item);
-            return;
         }
+        applesauceEverythingElse(item);
+        return;
     }
 
     private void applesauceEverythingElse(Item item) {
