@@ -25,7 +25,7 @@ class GildedRose {
             }
 
             if (item.sellIn < 0) {
-                if (!item.name.equals("Aged Brie")) {
+                if (false) {
 
                 } else {
                     if (item.quality < 50) {
