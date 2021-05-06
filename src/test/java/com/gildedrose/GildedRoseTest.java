@@ -1,11 +1,12 @@
 package com.gildedrose;
 
-import com.github.larseckart.tcr.TestCommitRevertMainExtension;
+import com.github.larseckart.tcr.FastTestCommitRevertMainExtension;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-@ExtendWith(TestCommitRevertMainExtension.class)
+
+@ExtendWith(FastTestCommitRevertMainExtension.class)
 
 
 public class GildedRoseTest {
