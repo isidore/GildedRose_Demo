@@ -16,9 +16,7 @@ public class GildedRoseTest {
     public void foo() {
         String names[] = {"foo","Aged Brie","Backstage passes to a TAFKAL80ETC concert"};
             Integer qualities[] = {0};
-        CombinationApprovals.verifyAllCombinations(name -> {
-            return doStuff(name, qualities[0]);
-        }, names);
+        CombinationApprovals.verifyAllCombinations(this::doStuff, names, qualities);
     }
 
     private String doStuff(String name, Integer quality) {
