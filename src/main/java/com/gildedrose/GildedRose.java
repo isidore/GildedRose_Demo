@@ -14,7 +14,7 @@ class GildedRose {
     }
 
     private void applesauce(Item item) {
-        if (true){
+        if (item.name.equals("Aged Brie")){
 
         }else
         {
