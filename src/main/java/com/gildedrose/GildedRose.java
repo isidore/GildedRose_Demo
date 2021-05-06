@@ -14,6 +14,12 @@ class GildedRose {
     }
 
     private void applesauce(Item item) {
+        if (true){
+
+        }else
+        {
+
+        }
         applesauce2(item);
     }
 
