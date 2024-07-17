@@ -13,7 +13,7 @@ import org.lambda.utils.Range;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 //@ExtendWith(TestCommitRevertExtension.class)
-@ExtendWith(FastTestCommitRevertMainExtension.class)
+//@ExtendWith(FastTestCommitRevertMainExtension.class)
 public class GildedRoseTest {
 
     @Test

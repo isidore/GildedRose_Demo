@@ -40,15 +40,16 @@ class GildedRose {
         }
     }
     private static void updateQualityForConjured(Item item) {
+        int multiplier = 1;
         if (item.quality > 0) {
-            item.quality = item.quality -2;
+            item.quality = item.quality - (2 * multiplier);
         }
 
         item.sellIn = item.sellIn - 1;
 
         if (item.sellIn < 0) {
             if (item.quality > 0) {
-                item.quality = item.quality - 1;
+                item.quality = item.quality - (1 * multiplier);
             }
         }
     }
