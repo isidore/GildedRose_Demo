@@ -5,6 +5,7 @@ import com.github.larseckart.tcr.TestCommitRevertExtension;
 import org.approvaltests.combinations.CombinationApprovals;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.lambda.utils.Range;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 //@ExtendWith(TestCommitRevertExtension.class)
@@ -14,8 +15,8 @@ public class GildedRoseTest {
     @Test
     public void foo() {
         String[] names = {"foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert", "Sulfuras, Hand of Ragnaros"};
-        Integer[] qualities = {0, -1, 1,2,3,5,6,7,49,50,51};
-        Integer[] sellIns = {0, -1, 1,2,3,5,6,7,10,11,12};
+        Integer[] qualities = Range.get(-1, 52);
+        Integer[] sellIns = Range.get(-1, 20);
         CombinationApprovals.verifyAllCombinations(GildedRoseTest::doStuff, names, qualities, sellIns);
     }
 
