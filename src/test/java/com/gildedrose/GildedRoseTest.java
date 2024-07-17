@@ -10,9 +10,9 @@ public class GildedRoseTest {
 
     @Test
     public void foo() {
-        String[] names = {"foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert"};
-        Integer[] qualities = {0, -1, 1};
-        Integer[] sellIns = {0, -1, 1};
+        String[] names = {"foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert", "Sulfuras, Hand of Ragnaros"};
+        Integer[] qualities = {0, -1, 1,2,3,5,6,7,49,50,51};
+        Integer[] sellIns = {0, -1, 1,2,3,5,6,7,10,11,12};
         CombinationApprovals.verifyAllCombinations(GildedRoseTest::doStuff, names, qualities, sellIns);
     }
 
