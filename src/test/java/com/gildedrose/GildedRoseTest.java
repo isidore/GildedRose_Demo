@@ -12,11 +12,12 @@ public class GildedRoseTest {
     public void foo() {
         String[] names = {"foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert"};
         Integer[] qualities = {0, -1, 1};
-        CombinationApprovals.verifyAllCombinations(GildedRoseTest::doStuff, names, qualities);
+        Integer[] sellIns = {0};
+        CombinationApprovals.verifyAllCombinations(GildedRoseTest::doStuff, names, qualities, sellIns);
     }
 
-    private static String doStuff(String name, Integer quality) {
-        Item[] items = new Item[]{new Item(name, 0, quality)};
+    private static String doStuff(String name, Integer quality, Integer sellIn) {
+        Item[] items = new Item[]{new Item(name, sellIn, quality)};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
         String result = app.items[0].toString();
