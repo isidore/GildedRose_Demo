@@ -14,8 +14,7 @@ public class GildedRoseTest {
     @Test
     public void foo() {
         String name = "foo";
-        String result = doStuff(name);
-        Approvals.verify(result);
+        Approvals.verify(doStuff(name));
     }
 
     private static String doStuff(String name) {
