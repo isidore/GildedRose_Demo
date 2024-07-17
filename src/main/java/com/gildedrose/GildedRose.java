@@ -16,10 +16,7 @@ class GildedRose {
                 updateQualityForBackstagePasses(item);
             } else {
                 if (item.name.equals("Sulfuras, Hand of Ragnaros")){
-                    if (item.quality > 0) {
-                        
-
-                    }
+                   
 
 
 
