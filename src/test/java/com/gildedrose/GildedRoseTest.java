@@ -11,7 +11,7 @@ public class GildedRoseTest {
     @Test
     public void foo() {
         String[] names = {"foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert"};
-        Integer[] qualities = {0};
+        Integer[] qualities = {0, -1, 1};
         CombinationApprovals.verifyAllCombinations(GildedRoseTest::doStuff, names, qualities);
     }
 
