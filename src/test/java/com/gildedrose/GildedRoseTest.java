@@ -3,18 +3,19 @@ package com.gildedrose;
 import com.github.larseckart.tcr.FastTestCommitRevertMainExtension;
 import com.github.larseckart.tcr.TestCommitRevertExtension;
 import org.approvaltests.Approvals;
+import org.approvaltests.combinations.CombinationApprovals;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-@ExtendWith(TestCommitRevertExtension.class)
+//@ExtendWith(TestCommitRevertExtension.class)
 //@ExtendWith(FastTestCommitRevertMainExtension.class)
 public class GildedRoseTest {
 
     @Test
     public void foo() {
-        String name = "foo";
-        Approvals.verify(doStuff(name));
+        String[] names = {"foo"};
+        CombinationApprovals.verifyAllCombinations(GildedRoseTest::doStuff, names);
     }
 
     private static String doStuff(String name) {
