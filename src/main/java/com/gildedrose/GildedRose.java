@@ -16,6 +16,8 @@ class GildedRose {
                 updateQualityForBackstagePasses(item);
             } else if (item.name.equals("Sulfuras, Hand of Ragnaros")) {
                 updateQualityForSulfuras(item);
+            }else if (item.name.startsWith("Conjured")) {
+                updateQualityForConjured(item);
             } else {
                 updateNormalQuality(item);
 
@@ -24,6 +26,20 @@ class GildedRose {
     }
 
     private static void updateNormalQuality(Item item) {
+        if (item.quality > 0) {
+            item.quality = item.quality - 1;
+            item.quality = item.quality - 1;
+        }
+
+        item.sellIn = item.sellIn - 1;
+
+        if (item.sellIn < 0) {
+            if (item.quality > 0) {
+                item.quality = item.quality - 1;
+            }
+        }
+    }
+    private static void updateQualityForConjured(Item item) {
         if (item.quality > 0) {
             item.quality = item.quality - 1;
             item.quality = item.quality - 1;
