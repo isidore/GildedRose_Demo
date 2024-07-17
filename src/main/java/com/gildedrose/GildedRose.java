@@ -84,11 +84,6 @@ class GildedRose {
                                     }
                                 }
 
-                                if (item.sellIn < 6) {
-                                    if (item.quality < 50) {
-                                        item.quality = item.quality + 1;
-                                    }
-                                }
                             }
                         }
                     }
@@ -104,7 +99,7 @@ class GildedRose {
                                     item.quality = item.quality - 1;
                                 }
                             }
-                        } 
+                        }
                     }
 
                 }
