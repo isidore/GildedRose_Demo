@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-//@ExtendWith(TestCommitRevertExtension.class)
+@ExtendWith(TestCommitRevertExtension.class)
 //@ExtendWith(FastTestCommitRevertMainExtension.class)
 public class GildedRoseTest {
 
