@@ -14,11 +14,16 @@ public class GildedRoseTest {
     @Test
     public void foo() {
         String name = "foo";
+        String result = doStuff(name);
+        Approvals.verify(result);
+    }
+
+    private static String doStuff(String name) {
         Item[] items = new Item[]{new Item(name, 0, 0)};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
         String result = app.items[0].toString();
-        Approvals.verify(result);
+        return result;
     }
 
 }
