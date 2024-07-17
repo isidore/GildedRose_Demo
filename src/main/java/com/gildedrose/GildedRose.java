@@ -10,10 +10,11 @@ class GildedRose {
     public void updateQuality() {
         for (int i = 0; i < items.length; i++) {
             Item item = items[i];
-            if (item.name.equals("Aged Brie")) updateQualityForAgedBrie(item);
-            else if (item.name.equals("Backstage passes to a TAFKAL80ETC concert"))
+            if (item.name.equals("Aged Brie")) {
+                updateQualityForAgedBrie(item);
+            } else if (item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
                 updateQualityForBackstagePasses(item);
-            else {
+            } else {
                 other(item);
 
             }
