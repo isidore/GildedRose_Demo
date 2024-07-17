@@ -15,7 +15,12 @@ class GildedRose {
             } else if (item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
                 updateQualityForBackstagePasses(item);
             } else {
+                if (true){
+                other(item);}
+                else {
                 other(item);
+
+                }
 
             }
         }
