@@ -19,23 +19,25 @@ class GildedRose {
                     updateQualityForSulfuras(item);
                 }
                 else {
-                    if (item.quality > 0) {
-                        item.quality = item.quality - 1;
-                        item.quality = item.quality - 1;
-                    }
-
-                    item.sellIn = item.sellIn - 1;
-
-                    if (item.sellIn < 0) {
-                        if (true) {
-                            if (item.quality > 0) {
-                                item.quality = item.quality - 1;
-                            }
-                        }
-                    }
+                    updateNormalQuality(item);
 
                 }
 
+            }
+        }
+    }
+
+    private static void updateNormalQuality(Item item) {
+        if (item.quality > 0) {
+            item.quality = item.quality - 1;
+            item.quality = item.quality - 1;
+        }
+
+        item.sellIn = item.sellIn - 1;
+
+        if (item.sellIn < 0) {
+            if (item.quality > 0) {
+                item.quality = item.quality - 1;
             }
         }
     }
