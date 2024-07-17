@@ -40,7 +40,7 @@ class GildedRose {
         }
     }
     private static void updateQualityForConjured(Item item) {
-        int multiplier = 1;
+        int multiplier = 2;
         if (item.quality > 0) {
             item.quality = item.quality - (2 * multiplier);
         }
