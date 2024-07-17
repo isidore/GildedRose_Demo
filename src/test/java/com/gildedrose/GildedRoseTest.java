@@ -2,6 +2,7 @@ package com.gildedrose;
 
 import com.github.larseckart.tcr.FastTestCommitRevertMainExtension;
 import com.github.larseckart.tcr.TestCommitRevertExtension;
+import org.approvaltests.Approvals;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
@@ -15,7 +16,7 @@ public class GildedRoseTest {
         Item[] items = new Item[]{new Item("foo", 0, 0)};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertEquals("foo", app.items[0].name);
+        Approvals.verify( app.items[0].name);
     }
 
 }
